@@ -1,9 +1,11 @@
 class Turn
-  attr_reader :player1, :player2, :round
+  attr_reader :current_player, :second_player, :round
 
-  def initialize player1, player2, round
-    @player1 = player1
-    @player2 = player2
+  def initialize current_player, second_player, round
+    @current_player = current_player
+    @second_player = second_player
     @round = round
   end
 end
+
+

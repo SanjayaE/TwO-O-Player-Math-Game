@@ -1,4 +1,5 @@
 require_relative './turn'
+require_relative './player'
 
 class Player
   attr_reader :name, :lives
@@ -10,12 +11,12 @@ class Player
   end
 
   def minus_points
-    @lives -=1
+    @lives -= 1
   end
 
   def summary
 
-    "#{name}:#{lives} Lives #{dead_summry}"
+    "#{name}: #{@lives} / #{MAX_LIVES}"
   end
 
   def dead_summry
@@ -23,6 +24,6 @@ class Player
   end
 
   def dead?
-    @lives =0
+    @lives ==0
   end
 end
